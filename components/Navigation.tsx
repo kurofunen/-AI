@@ -52,7 +52,8 @@ const Navigation: React.FC = () => {
             <a
               key={link.label}
               href={link.path}
-              className={`text-4xl tracking-[0.4em] font-serif-jp font-thin transition-all delay-[${i * 100}ms] ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+              className={`text-4xl tracking-[0.4em] font-serif-jp font-thin transition-all ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+              style={{ transitionDelay: isMenuOpen ? `${i * 100}ms` : '0ms' }}
               onClick={() => setIsMenuOpen(false)}
             >
               {link.label}
