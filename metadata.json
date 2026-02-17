@@ -1,0 +1,8 @@
+{
+  "name": "Kenshi Yonezu Inspired SPA",
+  "description": "A high-end, minimalist SPA inspired by the official Kenshi Yonezu website, featuring floating animations, asymmetric layouts, and elegant typography.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
