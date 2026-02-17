@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HERO_SLIDES } from '../constants';
+import { HERO_SLIDES } from '../constants.tsx';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
@@ -34,12 +34,10 @@ const Hero: React.FC = () => {
               alt={HERO_SLIDES[index].title} 
               className="w-full h-full object-cover ken-burns"
             />
-            {/* Visual Overlays */}
             <div className="absolute inset-0 bg-black/10" />
             <div className="absolute inset-0 hero-gradient" />
           </div>
 
-          {/* Text Content */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-6">
             <motion.div 
               initial={{ opacity: 0, y: 40 }}
@@ -53,7 +51,6 @@ const Hero: React.FC = () => {
               <p className="text-[10px] md:text-xs tracking-[0.6em] font-light uppercase mb-12 opacity-80">
                 {HERO_SLIDES[index].subtitle}
               </p>
-              
               <motion.a
                 href="#"
                 whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,1)', color: '#000' }}
@@ -66,9 +63,7 @@ const Hero: React.FC = () => {
         </motion.div>
       </AnimatePresence>
 
-      {/* Hero Bottom UI */}
       <div className="absolute bottom-16 left-0 w-full px-12 flex justify-between items-end z-30">
-        {/* Navigation Dots */}
         <div className="flex items-center space-x-6">
           {HERO_SLIDES.map((_, i) => (
             <button
@@ -84,7 +79,6 @@ const Hero: React.FC = () => {
           ))}
         </div>
 
-        {/* Slide Controls */}
         <div className="flex items-center space-x-8">
             <button onClick={prevSlide} className="text-white/40 hover:text-white transition-colors">
               <ChevronLeft size={32} strokeWidth={1} />
@@ -95,7 +89,6 @@ const Hero: React.FC = () => {
         </div>
       </div>
       
-      {/* Side Label */}
       <div className="absolute left-10 top-1/2 -rotate-90 origin-left z-30 hidden md:block">
         <span className="text-[9px] tracking-[0.8em] uppercase text-white font-light opacity-30">
           Reissue Records

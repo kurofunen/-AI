@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MOCK_NEWS } from '../constants';
+import { MOCK_NEWS } from '../constants.tsx';
 import { ChevronRight } from 'lucide-react';
 
 const NewsList: React.FC = () => {

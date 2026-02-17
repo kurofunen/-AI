@@ -1,12 +1,12 @@
 
 import React from 'react';
-import Navigation from './components/Navigation';
-import Hero from './components/Hero';
-import NewsList from './components/NewsList';
-import IllustDivider from './components/IllustDivider';
-import DiscographySlider from './components/DiscographySlider';
-import Footer from './components/Footer';
-import CustomCursor from './components/CustomCursor';
+import Navigation from './components/Navigation.tsx';
+import Hero from './components/Hero.tsx';
+import NewsList from './components/NewsList.tsx';
+import IllustDivider from './components/IllustDivider.tsx';
+import DiscographySlider from './components/DiscographySlider.tsx';
+import Footer from './components/Footer.tsx';
+import CustomCursor from './components/CustomCursor.tsx';
 
 const App: React.FC = () => {
   return (
@@ -14,11 +14,11 @@ const App: React.FC = () => {
       <CustomCursor />
       <Navigation />
       
-      {/* Smooth entry animation for the whole page */}
+      {/* ページ全体のエントランスアニメーション */}
       <div className="animate-in fade-in duration-1000 ease-out">
         <Hero />
         
-        {/* Content sections with proper layering and spacing */}
+        {/* コンテンツセクション - 背景色とシャドウでFVとの境界を明確化 */}
         <div className="relative bg-white z-20 shadow-[0_-40px_100px_rgba(0,0,0,0.1)]">
           <section id="news" className="bg-white">
             <NewsList />
@@ -30,7 +30,7 @@ const App: React.FC = () => {
             <DiscographySlider />
           </section>
           
-          {/* Profile Section - Enhanced to match reference site style */}
+          {/* Profile Section */}
           <section id="profile" className="py-48 bg-white flex flex-col items-center justify-center text-center px-6 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-[0.02] select-none flex items-center justify-center">
                 <span className="text-[25vw] font-serif-jp italic font-bold tracking-tighter">Profile</span>

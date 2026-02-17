@@ -1,14 +1,13 @@
 
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { MOCK_ALBUMS } from '../constants';
+import { motion } from 'framer-motion';
+import { MOCK_ALBUMS } from '../constants.tsx';
 
 const DiscographySlider: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   
   return (
     <section id="discography" className="relative py-40 bg-[#080808] text-white overflow-hidden">
-      {/* Large Background Text */}
       <div className="absolute top-20 left-12 select-none pointer-events-none opacity-[0.03] z-0">
         <span className="text-[15vw] font-serif-jp italic font-bold tracking-tighter uppercase leading-none whitespace-nowrap">
           Discography
@@ -23,7 +22,6 @@ const DiscographySlider: React.FC = () => {
           </div>
         </div>
 
-        {/* Slider Container */}
         <div 
           ref={scrollRef}
           className="flex space-x-8 md:space-x-12 overflow-x-auto pb-16 snap-x no-scrollbar cursor-grab active:cursor-grabbing"
@@ -45,7 +43,6 @@ const DiscographySlider: React.FC = () => {
                   alt={album.title} 
                   className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
                 />
-                {/* Type Badge on Hover */}
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                   <span className="text-[10px] tracking-[0.5em] font-bold border border-white px-4 py-2 uppercase">
                     View {album.type}
@@ -64,7 +61,6 @@ const DiscographySlider: React.FC = () => {
             </motion.a>
           ))}
           
-          {/* Archive / View All Slide */}
           <motion.a 
             href="#"
             className="flex-shrink-0 w-[280px] md:w-[380px] snap-start flex flex-col items-center justify-center border border-white/5 hover:bg-white/[0.02] transition-all duration-500 aspect-square"
@@ -75,7 +71,6 @@ const DiscographySlider: React.FC = () => {
           </motion.a>
         </div>
 
-        {/* Custom Scroll Hint */}
         <div className="flex items-center space-x-4 mt-8 opacity-20">
           <div className="w-12 h-[1px] bg-white"></div>
           <span className="text-[9px] tracking-[0.4em] uppercase font-bold">Slide to explore</span>
